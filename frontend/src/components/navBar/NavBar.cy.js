@@ -3,8 +3,8 @@ import NavBar from "./NavBar";
 import { BrowserRouter } from "react-router-dom";
 import { AuthContextProvider } from "../../contexts/AuthContext";
 
-describe("LoginForm", () => {
-  it("renders", () => {
+describe("NavBar", () => {
+  beforeEach(() => {
     cy.mount(
       <BrowserRouter>
         <AuthContextProvider>
@@ -12,5 +12,10 @@ describe("LoginForm", () => {
         </AuthContextProvider>
       </BrowserRouter>
     );
+  });
+
+  it("displays Properties and About buttons", () => {
+    cy.get("div").contains("Properties").should("exist");
+    cy.get("div").contains("About").should("exist");
   });
 });
