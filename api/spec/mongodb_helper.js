@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 beforeAll(function (done) {
-  mongoose.connect("mongodb://0.0.0.0/tenant_talk_test", {
+  mongoose.connect("mongodb://0.0.0.0/tenant_talk", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   });

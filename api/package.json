@@ -3,12 +3,13 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon ./bin/www",
+    "start": "node server.js",
     "start:test": "MONGODB_URL='mongodb://0.0.0.0/acebook_test' npm start",
     "test": "jest"
   },
   "engines": {
-    "node": ">=18.1.0"
+    "node": ">=18.1.0",
+    "npm": "9.5.1"
   },
   "dependencies": {
     "@cloudinary/react": "^1.11.2",
